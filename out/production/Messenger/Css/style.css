@@ -22,12 +22,12 @@
 }
 
 .txtFont {
-    -fx-text-fill: #f4f4f4;
+    -fx-text-fill: #999;
 }
 
 .txtFont:focused {
     -fx-border-color: transparent transparent #558b2f transparent;
-    -fx-text-fill: #f4f4f4;
+    -fx-text-fill: #ccc;
 }
 
 .scroll-pane {

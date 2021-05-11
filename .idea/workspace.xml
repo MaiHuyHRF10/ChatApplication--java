@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,18 +44,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-8.0.24.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="Messenger" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;D:\Chat Application\ChatApplication--java\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Client.*" />
@@ -98,26 +120,57 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620543771826">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620728477764">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1620728477764" />
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1620543771826" />
-    <state width="1323" height="172" key="GridCell.Tab.0.bottom" timestamp="1620545737481">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="261" y="0" width="547" height="720" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1620728357271">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="261" y="0" width="547" height="720" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.720@0.0.1280.720" timestamp="1620728357271" />
+    <state x="348" y="102" key="FileChooserDialogImpl" timestamp="1620728355650">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
+    <state width="1237" height="133" key="GridCell.Tab.0.bottom" timestamp="1620729144785">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620729144785" />
     <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1323" height="172" key="GridCell.Tab.0.center" timestamp="1620545737481">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1237" height="133" key="GridCell.Tab.0.center" timestamp="1620729144784">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620729144784" />
     <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1323" height="172" key="GridCell.Tab.0.left" timestamp="1620545737481">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1237" height="133" key="GridCell.Tab.0.left" timestamp="1620729144784">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620729144784" />
     <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1323" height="172" key="GridCell.Tab.0.right" timestamp="1620545737481">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1237" height="133" key="GridCell.Tab.0.right" timestamp="1620729144785">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620729144785" />
     <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1620728418124">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1620728418124" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Client/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
