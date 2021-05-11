@@ -34,32 +34,32 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Button layoutX="62.0" layoutY="340.0" mnemonicParsing="false" onAction="#registration" prefHeight="35.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #e6ab47;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Create Account" textFill="#004c40">
+                  <Button layoutX="62.0" layoutY="375.0" mnemonicParsing="false" onAction="#registration" prefHeight="35.0" prefWidth="208.0" style="-fx-background-radius: 90; -fx-background-color: #e6ab47;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Create Account" textFill="#004c40">
                      <font>
                         <Font name="Beirut Regular" size="18.0" />
                      </font>
                   </Button>
-                  <Label layoutX="61.0" layoutY="408.0" text="Already Have an Account?" textFill="#dad7d7">
+                  <Label layoutX="60.0" layoutY="422.0" text="Already Have an Account?" textFill="#dad7d7">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <Button fx:id="getStarted" layoutX="103.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #e6ab47; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Log In Here" textFill="#004c40">
+                  <Button fx:id="getStarted" layoutX="103.0" layoutY="480.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: #e6ab47; -fx-background-radius: 90;" styleClass="btnLogin" stylesheets="@../Css/style.css" text="Log In Here" textFill="#004c40">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Label fx:id="controlRegLabel" layoutX="45.0" layoutY="384.0" opacity="0.0" text="Please enter all the necessary info!" textFill="#f44336">
+                  <Label fx:id="controlRegLabel" layoutX="46.0" layoutY="347.0" opacity="0.0" text="Please enter all the necessary info!" textFill="#f44336">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="success" layoutX="78.0" layoutY="381.0" opacity="0.0" text="Registration Successful" textFill="#6abf69">
+                  <Label fx:id="success" layoutX="80.0" layoutY="343.0" opacity="0.0" text="Registration Successful" textFill="#6abf69">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="goBack" layoutX="74.0" layoutY="436.0" opacity="0.0" text="Please go back and login!" textFill="#6abf69">
+                  <Label fx:id="goBack" layoutX="75.0" layoutY="450.0" opacity="0.0" text="Please go back and login!" textFill="#6abf69">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -69,7 +69,7 @@
                         <Font name="Arial" size="17.0" />
                      </font>
                   </TextField>
-                  <RadioButton fx:id="male" layoutX="73.0" layoutY="270.0" mnemonicParsing="false" selected="true" text="Male" textFill="#ebe8e8">
+                  <RadioButton fx:id="male" layoutX="73.0" layoutY="309.0" mnemonicParsing="false" selected="true" text="Male" textFill="#ebe8e8">
                      <font>
                         <Font name="Arial" size="15.0" />
                      </font>
@@ -77,12 +77,12 @@
                         <ToggleGroup fx:id="Gender" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="female" layoutX="171.0" layoutY="270.0" mnemonicParsing="false" text="Female" textFill="#ebe8e8" toggleGroup="$Gender">
+                  <RadioButton fx:id="female" layoutX="166.0" layoutY="309.0" mnemonicParsing="false" text="Female" textFill="#ebe8e8" toggleGroup="$Gender">
                      <font>
                         <Font name="Arial" size="15.0" />
                      </font>
                   </RadioButton>
-                  <Label fx:id="nameExists" layoutX="75.0" layoutY="385.0" opacity="0.0" text="Username already exists!" textFill="#f44336">
+                  <Label fx:id="nameExists" layoutX="75.0" layoutY="346.0" opacity="0.0" text="Username already exists!" textFill="#f44336">
                      <font>
                         <Font name="Arial" size="16.0" />
                      </font>
@@ -97,6 +97,11 @@
                         <Image url="@../icons/secure.png" />
                      </image>
                   </ImageView>
+                  <TextField fx:id="regFulName" layoutX="40.0" layoutY="246.0" prefHeight="40.0" prefWidth="250.0" promptText="Full Name" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
                </children>
             </Pane>
             <Pane fx:id="pnSignIn" prefHeight="517.0" prefWidth="330.0" style="-fx-background-color: #7ee093;">

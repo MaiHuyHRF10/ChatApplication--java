@@ -19,11 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="" />
+    <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/sample.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
@@ -42,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-8.0.24.jar" />
@@ -83,13 +91,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,6 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1620542735276</updated>
       <workItem from="1620542737119" duration="2899000" />
+      <workItem from="1620729420681" duration="1873000" />
     </task>
     <servers />
   </component>
@@ -121,6 +132,15 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -137,25 +157,25 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom" timestamp="1620729144785">
+    <state width="1237" height="133" key="GridCell.Tab.0.bottom" timestamp="1620731366313">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620729144785" />
+    <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
     <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.center" timestamp="1620729144784">
+    <state width="1237" height="133" key="GridCell.Tab.0.center" timestamp="1620731366313">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620729144784" />
+    <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
     <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.left" timestamp="1620729144784">
+    <state width="1237" height="133" key="GridCell.Tab.0.left" timestamp="1620731366313">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620729144784" />
+    <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
     <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.right" timestamp="1620729144785">
+    <state width="1237" height="133" key="GridCell.Tab.0.right" timestamp="1620731366313">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620729144785" />
+    <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
     <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1620728418124">
       <screen x="0" y="0" width="1280" height="720" />
