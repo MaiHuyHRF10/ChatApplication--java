@@ -28,6 +28,7 @@ import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static Client.Controller.username;
 import static Client.Controller.users;
 
 public class Room extends Thread implements Initializable, Runnable {
@@ -72,7 +73,7 @@ public class Room extends Thread implements Initializable, Runnable {
 
     public void connectSocket() {
         try {
-            socket = new Socket("localhost", 8889);
+            socket = UserList.socket;
             System.out.println("Socket is connected with server!");
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -87,20 +88,22 @@ public class Room extends Thread implements Initializable, Runnable {
 
         try {
             while (true) {
-//                clientName.setText(UserList.sendTo + " " + ConnectDB.getStatus(UserList.sendTo));
                 String msg = reader.readLine();
+                System.out.println(msg);
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
-                StringBuilder fulmsg = new StringBuilder();
-                for(int i = 1; i < tokens.length; i++) {
-                    fulmsg.append(tokens[i]);
-                }
-                if (cmd.equalsIgnoreCase(Controller.username + ":")) {
+
+                if (cmd.equalsIgnoreCase("msg")) {
+                    String sendTo = tokens[1];
+                    if (sendTo.equalsIgnoreCase(UserList.sendTo)) {
+                        msgRoom.appendText(UserList.sendTo + ": " + tokens[2] + "\n");
+                    } else if (sendTo.equalsIgnoreCase(username)) {
+                        continue;
+                    }
+                } else if (cmd.equalsIgnoreCase("online") || cmd.equalsIgnoreCase("ok")) {
                     continue;
-                } else if (fulmsg.toString().equalsIgnoreCase("bye")) {
-                    break;
                 } else {
-                    msgRoom.appendText(msg + "\n");
+                    break;
                 }
             }
             reader.close();
@@ -145,17 +148,15 @@ public class Room extends Thread implements Initializable, Runnable {
 
     public void handleSendEvent(MouseEvent event) {
         send();
-
     }
 
 
     public void send() {
         String msg = msgField.getText();
         System.out.println(msg);
-        writer.println(Controller.username + ": " + msg);
+        writer.println("msg " + UserList.sendTo + " " + msg);
         msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
         msgRoom.appendText("Me: " + msg + "\n");
-        //msgRoom.appendText(msg + "\n");
         msgField.setText("");
         if (msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
             System.exit(0);

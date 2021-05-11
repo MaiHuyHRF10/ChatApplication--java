@@ -20,14 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Client/ChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Client/UserStatusListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Messenger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Messenger.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Server/ClientHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-8.0.24.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.21.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,33 +81,6 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Client.Main" />
-      <module name="Messenger" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;D:\Chat Application\ChatApplication--java\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server.Server" />
-      <module name="Messenger" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -104,13 +94,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Main" />
+      <module name="Messenger" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="Messenger" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Server" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Server" />
       </list>
     </recent_temporary>
@@ -144,53 +161,48 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620728477764">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620746239895">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1620728477764" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1620543771826" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1620746239895" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1620751694505">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1620751694505" />
     <state x="261" y="0" width="547" height="720" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1620728357271">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="261" y="0" width="547" height="720" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.720@0.0.1280.720" timestamp="1620728357271" />
-    <state x="348" y="102" key="FileChooserDialogImpl" timestamp="1620728355650">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="371" y="103" key="FileChooserDialogImpl" timestamp="1620732673049">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
-    <state width="1237" height="133" key="GridCell.Tab.0.bottom" timestamp="1620731366313">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="371" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620732673049" />
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1620755799037">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.center" timestamp="1620731366313">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620755799037" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1620755799037">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.left" timestamp="1620731366313">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620755799037" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1620755799037">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state width="1237" height="133" key="GridCell.Tab.0.right" timestamp="1620731366313">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620755799037" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1620755799037">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620545737481" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1620728418124">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620755799037" />
+    <state x="129" y="0" key="SettingsEditor" timestamp="1620732761612">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1620728418124" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Client/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1620732761612" />
   </component>
 </project>

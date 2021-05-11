@@ -10,10 +10,11 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class UserList implements Initializable {
+public class UserList implements Initializable, UserStatusListener {
 
     @FXML
     ListView<String> username;
@@ -25,15 +26,25 @@ public class UserList implements Initializable {
     public static String sendTo;
     public static String status;
 
+    public static Socket socket;
+
+    private ChatClient client;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        client = new ChatClient(8888, "localhost");
+        client.connect();
+        try {
+            if (client.login(Controller.username, Controller.password)) {
+                this.client.addUserStatusListener(this);
+                socket = client.getSocket();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         user.setText(Controller.fullName);
-        for (User user : Controller.users) {
-            if (!Controller.username.equalsIgnoreCase(user.getName())) {
-                username.getItems().add(user.getName() + " (" + user.getFullName() + ")");
-            }
-        }
+
         username.setOnMouseClicked(event -> {
             wordClick = username.getSelectionModel().getSelectedItem();
             if (wordClick != null) {
@@ -60,5 +71,15 @@ public class UserList implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void online(String userName) {
+        username.getItems().add(userName);
+    }
+
+    @Override
+    public void offline(String userName) {
+
     }
 }

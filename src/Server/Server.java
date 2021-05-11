@@ -5,24 +5,41 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class Server {
-    private static ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
+public class Server extends Thread {
+    private int serverPort;
+    private ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
 
-    public static void main(String[] args) {
-        ServerSocket serverSocket;
-        Socket socket;
+    public Server(int serverPort) {
+        this.serverPort = serverPort;
+    }
+
+    @Override
+    public void run() {
         try {
-            serverSocket = new ServerSocket(8889);
+            ServerSocket serverSocket = new ServerSocket(serverPort);
             while(true) {
                 System.out.println("Waiting for clients...");
-                socket = serverSocket.accept();
+                Socket socket = serverSocket.accept();
                 System.out.println("Connected");
-                ClientHandler clientThread = new ClientHandler(socket, clients);
+                ClientHandler clientThread = new ClientHandler(socket, this);
                 clients.add(clientThread);
                 clientThread.start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        Server serverMain = new Server(8888);
+        serverMain.start();
+    }
+
+    public ArrayList<ClientHandler> getListClientsHandler() {
+        return this.clients;
+    }
+
+    public void removeClientHandler(ClientHandler clientHandler) {
+        this.clients.remove(clientHandler);
     }
 }
