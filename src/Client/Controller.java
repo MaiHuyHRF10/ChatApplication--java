@@ -35,8 +35,8 @@ public class Controller {
     public TextField regPass;
     //    @FXML
 //    public TextField regEmail;
-//    @FXML
-//    public TextField regFirstName;
+    @FXML
+    public TextField regFulName;
 //    @FXML
 //    public TextField regPhoneNo;
     @FXML
@@ -59,25 +59,28 @@ public class Controller {
     public Label nameExists;
     @FXML
     public Label checkEmail;
-    public static String username, password, gender;
+    public static String username, password, gender, fullName;
     public static ArrayList<User> loggedInUser = new ArrayList<>();
     public static ArrayList<User> users = new ArrayList<User>();
 
     public void registration() {
-        if (!regName.getText().equalsIgnoreCase("")
+        if (!regName.getText().equalsIgnoreCase("") && !regFulName.getText().equalsIgnoreCase("")
                 && !regPass.getText().equalsIgnoreCase("")
                 && (male.isSelected() || female.isSelected())) {
             if (checkUser(regName.getText())) {
                 User newUser = new User();
-                newUser.name = regName.getText();
-                newUser.password = regPass.getText();
+                newUser.setName(regName.getText());
+                newUser.setPassword(regPass.getText());
+                newUser.setFullName(regFulName.getText());
                 if (male.isSelected()) {
-                    newUser.gender = "Male";
+                    newUser.setGender("Male");
                 } else {
-                    newUser.gender = "Female";
+                    newUser.setGender("Female");
                 }
+                newUser.setStatus("offline");
                 users.add(newUser);
-                UserList.addDatabase(newUser);
+                ConnectDB.addDatabase(newUser);
+                ConnectDB.setStatus("offline", regName.getText());
                 goBack.setOpacity(1);
                 success.setOpacity(1);
                 makeDefault();
@@ -109,7 +112,7 @@ public class Controller {
 
     private boolean checkUser(String username) {
         for (User user : users) {
-            if (user.name.equalsIgnoreCase(username)) {
+            if (user.getName().equalsIgnoreCase(username)) {
                 return false;
             }
         }
@@ -119,6 +122,7 @@ public class Controller {
     private void makeDefault() {
         regName.setText("");
         regPass.setText("");
+        regFulName.setText("");
         male.setSelected(true);
         controlRegLabel.setOpacity(0);
         nameExists.setOpacity(0);
@@ -130,11 +134,13 @@ public class Controller {
         password = passWord.getText();
         boolean login = false;
         for (User x : users) {
-            if (x.name.equalsIgnoreCase(username) && x.password.equalsIgnoreCase(password)) {
+            if (x.getName().equalsIgnoreCase(username) && x.getPassword().equalsIgnoreCase(password)) {
                 login = true;
                 loggedInUser.add(x);
-                System.out.println(x.name);
-                gender = x.gender;
+                x.setStatus("online");
+                ConnectDB.setStatus("online", username);
+                gender = x.getGender();
+                fullName = x.getFullName();
                 break;
             }
         }
@@ -148,10 +154,12 @@ public class Controller {
     public void changeWindow() {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
-            stage.setScene(new Scene(root, 330, 560));
-            stage.setTitle(username + "");
+            Parent root = FXMLLoader.load(this.getClass().getResource("UserList.fxml"));
+//            stage.setScene(new Scene(root, 330, 560));
+            stage.setScene(new Scene(root, 341, 468));
+            stage.setTitle("Chat Application");
             stage.setOnCloseRequest(event -> {
+                ConnectDB.setStatus("offline", username);
                 System.exit(0);
             });
             stage.setResizable(false);

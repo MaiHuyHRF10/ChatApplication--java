@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
 
 import static Client.Controller.users;
 
-public class Room extends Thread implements Initializable {
+public class Room extends Thread implements Initializable, Runnable {
     @FXML
     public Label clientName;
     @FXML
@@ -84,8 +84,10 @@ public class Room extends Thread implements Initializable {
 
     @Override
     public void run() {
+
         try {
             while (true) {
+//                clientName.setText(UserList.sendTo + " " + ConnectDB.getStatus(UserList.sendTo));
                 String msg = reader.readLine();
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
@@ -130,13 +132,13 @@ public class Room extends Thread implements Initializable {
 
     public void setProfile() {
         for (User user : users) {
-            if (Controller.username.equalsIgnoreCase(user.name)) {
-                fullName.setText(user.fullName);
+            if (Controller.username.equalsIgnoreCase(user.getName())) {
+                fullName.setText(user.getFullName());
                 fullName.setOpacity(1);
-                email.setText(user.email);
+                email.setText(user.getEmail());
                 email.setOpacity(1);
                 phoneNo.setText(user.phoneNo);
-                gender.setText(user.gender);
+                gender.setText(user.getGender());
             }
         }
     }
@@ -144,9 +146,6 @@ public class Room extends Thread implements Initializable {
     public void handleSendEvent(MouseEvent event) {
         send();
 
-        for (User user : users) {
-            System.out.println(user.name);
-        }
     }
 
 
@@ -208,7 +207,8 @@ public class Room extends Thread implements Initializable {
             proImage.setImage(image);
         }
         showProPic.setFill(new ImagePattern(image));
-        clientName.setText(Controller.username);
+        clientName.setText(UserList.sendTo + " " + ConnectDB.getStatus(UserList.sendTo));
         connectSocket();
+
     }
 }

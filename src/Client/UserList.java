@@ -1,61 +1,64 @@
 package Client;
 
-import javafx.scene.control.Control;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
-import java.sql.*;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class UserList {
-    public static Connection conn;
-    public static void connectDB() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/user_chat";// your db name
-            String user = "root"; // your db username
-            String password = ""; // your db password
-            conn = DriverManager.getConnection(url, user, password);
-            var sql = "select * from user";
-            var statement = conn.prepareStatement(sql);
-            var resultSet = statement.executeQuery();
-            showResult(resultSet);
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+public class UserList implements Initializable {
+
+    @FXML
+    ListView<String> username;
+
+    @FXML
+    Label user;
+
+    public static String wordClick;
+    public static String sendTo;
+    public static String status;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        user.setText(Controller.fullName);
+        for (User user : Controller.users) {
+            if (!Controller.username.equalsIgnoreCase(user.getName())) {
+                username.getItems().add(user.getName() + " (" + user.getFullName() + ")");
+            }
         }
+        username.setOnMouseClicked(event -> {
+            wordClick = username.getSelectionModel().getSelectedItem();
+            if (wordClick != null) {
+                String[] temp = wordClick.split(" ", 2);
+                sendTo = temp[0];
+                changeWindow();
+            }
+        });
     }
 
-    public static void addDatabase(User user) {
-        String sql = "INSERT INTO user(username, password, gender) VALUES ( ?, ?, ?)";
-
+    private void changeWindow() {
         try {
-            conn.setAutoCommit(false);
-            PreparedStatement statement = conn.prepareStatement(sql);
-            if (conn != null) {
-                //statement.setInt(1, 20000);
-                statement.setString(1, user.getName());
-                statement.setString(2, user.getPassword());
-                statement.setString(3, user.getGender());
-                int rowindex = statement.executeUpdate();
-                conn.commit();
-                System.out.println("insert ");
-            }
-        } catch (SQLException e) {
+            Stage stage = (Stage) user.getScene().getWindow();
+            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
+            stage.setScene(new Scene(root, 330, 560));
+            stage.setTitle("Chat Application");
+            stage.setOnCloseRequest(event -> {
+                ConnectDB.setStatus("offline", Controller.username);
+                System.exit(0);
+            });
+            stage.setResizable(false);
+            stage.show();
+            status = ConnectDB.getStatus(sendTo);
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-    private static void showResult(ResultSet resultSet) {
-        while (true) {
-            try {
-                if (!resultSet.next()) break;
-                String username = resultSet.getString("username");
-                String password = resultSet.getString("password");
-                String gender = resultSet.getString("gender");
-                User newUser = new User();
-                newUser.name = username;
-                newUser.password = password;
-                newUser.gender = gender;
-                Controller.users.add(newUser);
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
         }
     }
 }

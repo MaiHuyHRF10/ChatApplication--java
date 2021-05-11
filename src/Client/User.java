@@ -3,11 +3,12 @@ package Client;
 import java.util.ArrayList;
 
 public class User {
-    public String name;
-    public String fullName;
-    public String password;
-    public String email;
-    public String gender;
+    private String name;
+    private String fullName;
+    private String password;
+    private String email;
+    private String gender;
+    private String status;
 
     public void setName(String name) {
         this.name = name;
@@ -15,6 +16,14 @@ public class User {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setPassword(String password) {
