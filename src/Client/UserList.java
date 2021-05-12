@@ -26,9 +26,9 @@ public class UserList implements Initializable, UserStatusListener {
     public static String sendTo;
     public static String status;
 
-    public static Socket socket;
+    private Socket socket;
 
-    private ChatClient client;
+    public static ChatClient client;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,7 +48,7 @@ public class UserList implements Initializable, UserStatusListener {
         username.setOnMouseClicked(event -> {
             wordClick = username.getSelectionModel().getSelectedItem();
             if (wordClick != null) {
-                String[] temp = wordClick.split(" ", 2);
+                String[] temp = wordClick.split(" ", 1);
                 sendTo = temp[0];
                 changeWindow();
             }
@@ -80,6 +80,6 @@ public class UserList implements Initializable, UserStatusListener {
 
     @Override
     public void offline(String userName) {
-
+        username.getItems().remove(userName);
     }
 }

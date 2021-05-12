@@ -24,14 +24,12 @@ import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static Client.Controller.username;
 import static Client.Controller.users;
 
-public class Room extends Thread implements Initializable, Runnable {
+public class Room extends Thread implements Initializable, MessageListener {
     @FXML
     public Label clientName;
     @FXML
@@ -66,52 +64,12 @@ public class Room extends Thread implements Initializable, Runnable {
     private File filePath;
     public boolean toggleChat = false, toggleProfile = false;
 
-    BufferedReader reader;
-    PrintWriter writer;
-    Socket socket;
+    ChatClient chatClient;
 
 
     public void connectSocket() {
-        try {
-            socket = UserList.socket;
-            System.out.println("Socket is connected with server!");
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            writer = new PrintWriter(socket.getOutputStream(), true);
-            this.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    public void run() {
-
-        try {
-            while (true) {
-                String msg = reader.readLine();
-                System.out.println(msg);
-                String[] tokens = msg.split(" ");
-                String cmd = tokens[0];
-
-                if (cmd.equalsIgnoreCase("msg")) {
-                    String sendTo = tokens[1];
-                    if (sendTo.equalsIgnoreCase(UserList.sendTo)) {
-                        msgRoom.appendText(UserList.sendTo + ": " + tokens[2] + "\n");
-                    } else if (sendTo.equalsIgnoreCase(username)) {
-                        continue;
-                    }
-                } else if (cmd.equalsIgnoreCase("online") || cmd.equalsIgnoreCase("ok")) {
-                    continue;
-                } else {
-                    break;
-                }
-            }
-            reader.close();
-            writer.close();
-            socket.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        chatClient = UserList.client;
+        chatClient.addMessageListener(this);
     }
 
 
@@ -146,19 +104,18 @@ public class Room extends Thread implements Initializable, Runnable {
         }
     }
 
-    public void handleSendEvent(MouseEvent event) {
+    public void handleSendEvent(MouseEvent event) throws IOException {
         send();
     }
 
 
-    public void send() {
+    public void send() throws IOException {
         String msg = msgField.getText();
-        System.out.println(msg);
-        writer.println("msg " + UserList.sendTo + " " + msg);
+        chatClient.msg(UserList.sendTo, msg);
         msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
         msgRoom.appendText("Me: " + msg + "\n");
         msgField.setText("");
-        if (msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
+        if ((msg.equalsIgnoreCase("offline"))) {
             System.exit(0);
         }
     }
@@ -176,7 +133,7 @@ public class Room extends Thread implements Initializable, Runnable {
         saveControl = true;
     }
 
-    public void sendMessageByKey(KeyEvent event) {
+    public void sendMessageByKey(KeyEvent event) throws IOException {
         if (event.getCode().toString().equals("ENTER")) {
             send();
         }
@@ -210,6 +167,13 @@ public class Room extends Thread implements Initializable, Runnable {
         showProPic.setFill(new ImagePattern(image));
         clientName.setText(UserList.sendTo + " " + ConnectDB.getStatus(UserList.sendTo));
         connectSocket();
+    }
 
+    @Override
+    public void onMessage(String fromUser, String msgBody) {
+        if (fromUser.equalsIgnoreCase(UserList.sendTo)) {
+            String line = fromUser + ": " + msgBody;
+            msgRoom.appendText(line + "\n");
+        }
     }
 }

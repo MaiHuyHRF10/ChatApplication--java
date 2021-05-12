@@ -23,6 +23,13 @@ public class ChatClient {
 
         }
     };
+    
+    private MessageListener messageListener = new MessageListener() {
+        @Override
+        public void onMessage(String fromLogin, String msgBody) {
+            
+        }
+    };
 
 
     public ChatClient(int serverPort, String serverName) {
@@ -66,6 +73,9 @@ public class ChatClient {
                         handleOnline(tokens);
                     } else if ("offline".equalsIgnoreCase(cmd)) {
                         handleOffline(tokens);
+                    } else if ("msg".equalsIgnoreCase(cmd)) {
+                        String [] tokensMsg = line.split(" ", 3);
+                        handleMessage(tokensMsg);
                     }
                 }
             }
@@ -79,6 +89,18 @@ public class ChatClient {
         }
     }
 
+    public void msg(String sendTo, String body) throws IOException {
+        String msg = "msg " + sendTo + " " + body + "\n";
+        serverOut.write(msg.getBytes());
+    }
+
+    private void handleMessage(String[] tokensMsg) {
+        String sendTo = tokensMsg[1];
+        String body = tokensMsg[2];
+
+        messageListener.onMessage(sendTo, body);
+    }
+
     private void handleOffline(String[] tokens) {
         String userName = tokens[1];
         userStatusListener.offline(userName);
@@ -89,10 +111,6 @@ public class ChatClient {
         userStatusListener.online(user);
     }
 
-    public void msg(String sendTo, String body) throws IOException {
-        String msg = "msg " + sendTo + " " + body + "\n";
-        serverOut.write(msg.getBytes());
-    }
 
     public boolean connect() {
         try {
@@ -112,8 +130,11 @@ public class ChatClient {
         userStatusListener = listener;
     }
 
+    public void addMessageListener(MessageListener listener) {
+        messageListener = listener;
+    }
+
     public Socket getSocket() {
         return this.socket;
     }
-
 }

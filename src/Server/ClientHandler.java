@@ -59,9 +59,14 @@ public class ClientHandler extends Thread {
                     handleLogin(tokens);
                 } else if ("logOut".equalsIgnoreCase(cmd)) {
                     handleLogOut();
+                } else {
+                    String msg = "unknow " + cmd;
+                    writer.println(msg);
                 }
             }
         }
+
+        clientSocket.close();
     }
 
     private void handleLogOut() throws IOException {
@@ -114,7 +119,6 @@ public class ClientHandler extends Thread {
             }
         }
     }
-
 
     private void handleMessage(String[] tokenMsg) {
         String sendTo = tokenMsg[1];
