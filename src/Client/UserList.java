@@ -8,11 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.stage.Stage;
-import org.w3c.dom.ls.LSOutput;
+import javafx.stage.*;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,11 +47,13 @@ public class UserList implements Initializable, UserStatusListener {
         user.setText(Controller.fullName);
 
         username.setOnMouseClicked(event -> {
-            wordClick = username.getSelectionModel().getSelectedItem();
-            if (wordClick != null) {
-                String[] temp = wordClick.split(" ", 1);
-                sendTo = temp[0];
-                changeWindow();
+            if (event.getClickCount() == 2) {
+                wordClick = username.getSelectionModel().getSelectedItem();
+                if (wordClick != null) {
+                    String[] temp = wordClick.split(" ", 1);
+                    sendTo = temp[0];
+                    changeWindow();
+                }
             }
         });
 
@@ -61,18 +61,22 @@ public class UserList implements Initializable, UserStatusListener {
 
     private void changeWindow() {
         try {
-            Stage stage = (Stage) user.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
-            stage.setScene(new Scene(root, 330, 560));
-            stage.setTitle("Chat Application");
-//            stage.setOnCloseRequest(event -> {
-//                client.off(Controller.username);
-//
-//                ConnectDB.setStatus("offline", Controller.username);
-//                System.exit(0);
-//            });
-            stage.setResizable(false);
+
+//            Stage stage = (Stage) user.getScene().getWindow();
+//            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
+//            stage.setScene(new Scene(root, 330, 560));
+//            stage.setTitle("Chat Application");
+//            stage.setResizable(false);
+//            stage.show();
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Room.fxml"));
+            Parent root = (Parent) loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.setTitle("Room chat");
             stage.show();
+
             status = ConnectDB.getStatus(sendTo);
         } catch (IOException e) {
             e.printStackTrace();

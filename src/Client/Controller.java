@@ -163,22 +163,9 @@ public class Controller {
 //            stage.setScene(new Scene(root, 330, 560));
             stage.setScene(new Scene(root, 341, 468));
             stage.setTitle("Chat Application");
-//            stage.setOnCloseRequest(event -> {
-//                try {
-//                    UserList.client.getSocket().getOutputStream().write(("offline " + username + "\n").getBytes());
-//                    ConnectDB.setStatus("offline", username);
-//                    System.exit(0);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            });
-
             stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override
                 public void handle(WindowEvent e) {
-                    System.out.println("User list closed!!");
-
                     // Send cmd to server side
                     UserList.client.off(username);
 
