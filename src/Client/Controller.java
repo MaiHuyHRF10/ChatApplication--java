@@ -1,6 +1,8 @@
 package Client;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,6 +15,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -160,15 +163,40 @@ public class Controller {
 //            stage.setScene(new Scene(root, 330, 560));
             stage.setScene(new Scene(root, 341, 468));
             stage.setTitle("Chat Application");
-            stage.setOnCloseRequest(event -> {
-                try {
-                    UserList.client.getSocket().getOutputStream().write(("offline " + username + "\n").getBytes());
-                    ConnectDB.setStatus("offline", username);
-                    System.exit(0);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+//            stage.setOnCloseRequest(event -> {
+//                try {
+//                    UserList.client.getSocket().getOutputStream().write(("offline " + username + "\n").getBytes());
+//                    ConnectDB.setStatus("offline", username);
+//                    System.exit(0);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            });
 
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent e) {
+                    System.out.println("User list closed!!");
+
+                    // Send cmd to server side
+                    UserList.client.off(username);
+
+                    // Change the data in database
+                    User logOutUser = null;
+                    for (User x: loggedInUser)  {
+                        if (x.getName().equals(username)) {
+                            logOutUser = x;
+                            break;
+                        }
+                    }
+                    if (logOutUser != null) {
+                        loggedInUser.remove(logOutUser);
+                        logOutUser.setStatus("offline");
+                        ConnectDB.setStatus("offline", username);
+                    }
+                    System.exit(0);
+                }
             });
             stage.setResizable(false);
             stage.show();

@@ -1,5 +1,6 @@
 package Client;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
+import org.w3c.dom.ls.LSOutput;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -63,12 +65,12 @@ public class UserList implements Initializable, UserStatusListener {
             Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
             stage.setScene(new Scene(root, 330, 560));
             stage.setTitle("Chat Application");
-            stage.setOnCloseRequest(event -> {
-                client.off(Controller.username);
-
-                ConnectDB.setStatus("offline", Controller.username);
-                System.exit(0);
-            });
+//            stage.setOnCloseRequest(event -> {
+//                client.off(Controller.username);
+//
+//                ConnectDB.setStatus("offline", Controller.username);
+//                System.exit(0);
+//            });
             stage.setResizable(false);
             stage.show();
             status = ConnectDB.getStatus(sendTo);
@@ -84,6 +86,8 @@ public class UserList implements Initializable, UserStatusListener {
 
     @Override
     public void offline(String userName) {
-        username.getItems().remove(userName);
+        Platform.runLater(() -> {
+            username.getItems().remove(userName);
+        });
     }
 }

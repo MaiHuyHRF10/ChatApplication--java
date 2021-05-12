@@ -58,10 +58,10 @@ public class ClientHandler extends Thread {
                     handleMessage(tokenMsg);
                 } else if ("login".equalsIgnoreCase(cmd)) {
                     handleLogin(tokens);
-                } else if ("logOut".equalsIgnoreCase(cmd)) {
+                } else if ("logout".equalsIgnoreCase(cmd)) {
                     handleLogOut();
                 } else {
-                    String msg = "unknow " + cmd;
+                    String msg = "unknown " + cmd;
                     writer.println(msg);
                 }
             }

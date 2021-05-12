@@ -15,7 +15,6 @@ public class ChatClient {
     private UserStatusListener userStatusListener = new UserStatusListener() {
         @Override
         public void online(String login) {
-
         }
 
         @Override
@@ -93,8 +92,9 @@ public class ChatClient {
         String msg = "msg " + sendTo + " " + body + "\n";
         serverOut.write(msg.getBytes());
     }
+
     public void off(String username) {
-        String msg = "offline " + username + "\n";
+        String msg = "logout\n";
         try {
             serverOut.write(msg.getBytes());
         } catch (IOException e) {
@@ -115,8 +115,8 @@ public class ChatClient {
     }
 
     private void handleOnline(String[] tokens) {
-        String user = tokens[1];
-        userStatusListener.online(user);
+        String userName = tokens[1];
+        userStatusListener.online(userName);
     }
 
 
