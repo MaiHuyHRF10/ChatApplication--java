@@ -1,5 +1,9 @@
 package Server;
 
+import Client.ConnectDB;
+import Client.Controller;
+import Client.User;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -30,8 +34,10 @@ public class Server extends Thread {
         }
     }
 
+
     public static void main(String[] args) {
         Server serverMain = new Server(8888);
+        ConnectDB.connectDB();
         serverMain.start();
     }
 

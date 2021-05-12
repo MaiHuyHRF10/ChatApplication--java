@@ -20,16 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Client/MessageListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Messenger.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Messenger.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Server/ClientHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Server/ClientHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,35 +67,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.21.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Server">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client.Main" />
       <module name="Messenger" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Bui Loan\OneDrive\Documents\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Client.*" />
@@ -109,13 +96,24 @@
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server.Server" />
       <module name="Messenger" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Bui Loan\OneDrive\Documents\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +138,7 @@
       <updated>1620542735276</updated>
       <workItem from="1620542737119" duration="2899000" />
       <workItem from="1620729420681" duration="1873000" />
+      <workItem from="1620816404648" duration="6288000" />
     </task>
     <servers />
   </component>
@@ -159,11 +158,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620746239895">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620816677477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1620728477764" />
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1620746239895" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1620816677477" />
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1620810221556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -177,30 +176,30 @@
     </state>
     <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
     <state x="371" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620732673049" />
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1620812311541">
+    <state width="1323" height="172" key="GridCell.Tab.0.bottom" timestamp="1620823532190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620812311541" />
-    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1620812311540">
+    <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
+    <state width="1323" height="172" key="GridCell.Tab.0.center" timestamp="1620823532190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620812311540" />
-    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1620812311540">
+    <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
+    <state width="1323" height="172" key="GridCell.Tab.0.left" timestamp="1620823532189">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620812311540" />
-    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1620812311541">
+    <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620823532189" />
+    <state width="1323" height="172" key="GridCell.Tab.0.right" timestamp="1620823532190">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="133" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620731366313" />
-    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620812311541" />
-    <state x="129" y="0" key="SettingsEditor" timestamp="1620732761612">
+    <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
+    <state x="129" y="0" key="SettingsEditor" timestamp="1620816599565">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1620728418124" />
-    <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1620732761612" />
+    <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1620816599565" />
   </component>
 </project>

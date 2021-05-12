@@ -93,6 +93,14 @@ public class ChatClient {
         String msg = "msg " + sendTo + " " + body + "\n";
         serverOut.write(msg.getBytes());
     }
+    public void off(String username) {
+        String msg = "offline " + username + "\n";
+        try {
+            serverOut.write(msg.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private void handleMessage(String[] tokensMsg) {
         String sendTo = tokensMsg[1];
@@ -137,4 +145,5 @@ public class ChatClient {
     public Socket getSocket() {
         return this.socket;
     }
+
 }

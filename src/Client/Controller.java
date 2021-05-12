@@ -15,6 +15,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -160,8 +161,14 @@ public class Controller {
             stage.setScene(new Scene(root, 341, 468));
             stage.setTitle("Chat Application");
             stage.setOnCloseRequest(event -> {
-                ConnectDB.setStatus("offline", username);
-                System.exit(0);
+                try {
+                    UserList.client.getSocket().getOutputStream().write(("offline " + username + "\n").getBytes());
+                    ConnectDB.setStatus("offline", username);
+                    System.exit(0);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             });
             stage.setResizable(false);
             stage.show();

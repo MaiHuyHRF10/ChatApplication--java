@@ -10,6 +10,7 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,6 +54,7 @@ public class UserList implements Initializable, UserStatusListener {
                 changeWindow();
             }
         });
+
     }
 
     private void changeWindow() {
@@ -62,6 +64,8 @@ public class UserList implements Initializable, UserStatusListener {
             stage.setScene(new Scene(root, 330, 560));
             stage.setTitle("Chat Application");
             stage.setOnCloseRequest(event -> {
+                client.off(Controller.username);
+
                 ConnectDB.setStatus("offline", Controller.username);
                 System.exit(0);
             });

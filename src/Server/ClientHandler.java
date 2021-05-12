@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
 
+
 public class ClientHandler extends Thread {
 
     private String userName;
@@ -87,7 +88,7 @@ public class ClientHandler extends Thread {
             String userName = tokens[1];
             String password = tokens[2];
 
-            if ((userName.equals("guest") && password.equals("guest")) || (userName.equals("jim") && password.equals("jim")) || (userName.equals("huy") && password.equals("huy"))) {
+            if (checkLogin(userName, password)) {
                 String msg = "ok login";
                 this.writer.println(msg);
                 this.userName = userName;
@@ -135,6 +136,14 @@ public class ClientHandler extends Thread {
         }
     }
 
+    private boolean checkLogin(String username, String password) {
+        for (User x : Controller.users) {
+            if (x.getName().equalsIgnoreCase(username) && x.getPassword().equalsIgnoreCase(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
     private String getUserName() {
         return this.userName;
     }
