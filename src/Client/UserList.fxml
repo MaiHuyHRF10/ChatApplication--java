@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="468.0" prefWidth="341.0" style="-fx-background-color: #FAFAD2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UserList">
+<AnchorPane prefHeight="560.0" prefWidth="330.0" style="-fx-background-color: #a6f5bb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.UserList">
    <children>
-      <ListView fx:id="username" layoutX="14.0" layoutY="78.0" prefHeight="382.0" prefWidth="318.0" />
-      <Label fx:id="user" alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="14.0" prefHeight="45.0" prefWidth="247.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+      <ListView fx:id="username" layoutX="7.0" layoutY="78.0" prefHeight="474.0" prefWidth="318.0" styleClass="userListView" stylesheets="@../Css/style.css" />
+      <Label fx:id="user" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="14.0" prefHeight="41.0" prefWidth="144.0" text="Full name" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
          <font>
-            <Font size="38.0" />
+            <Font size="24.0" />
          </font>
       </Label>
    </children>

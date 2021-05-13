@@ -160,8 +160,7 @@ public class Controller {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
             Parent root = FXMLLoader.load(this.getClass().getResource("UserList.fxml"));
-//            stage.setScene(new Scene(root, 330, 560));
-            stage.setScene(new Scene(root, 341, 468));
+            stage.setScene(new Scene(root, 330, 560));
             stage.setTitle("Chat Application");
             stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override

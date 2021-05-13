@@ -23,9 +23,19 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Controller$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Messenger/icons/icons8-sent.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/icons/icons8-sent.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/UserList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/icons8-sent.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/icons8-sent.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,13 +114,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,7 +149,9 @@
       <workItem from="1620729420681" duration="1873000" />
       <workItem from="1620816404648" duration="6288000" />
       <workItem from="1620837421688" duration="7000" />
-      <workItem from="1620837439427" duration="6600000" />
+      <workItem from="1620837439427" duration="6853000" />
+      <workItem from="1620890561955" duration="8936000" />
+      <workItem from="1620924066553" duration="351000" />
     </task>
     <servers />
   </component>
@@ -157,6 +171,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="0" key="#Auto_Import" timestamp="1620897731639">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="414" y="0" key="#Auto_Import/0.0.1280.720@0.0.1280.720" timestamp="1620897731639" />
     <state x="128" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620837500538">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -175,31 +193,35 @@
     </state>
     <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
     <state x="371" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620732673049" />
-    <state width="1237" height="172" key="GridCell.Tab.0.bottom" timestamp="1620843964409">
+    <state width="1237" height="136" key="GridCell.Tab.0.bottom" timestamp="1620924152045">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="172" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620843964409" />
+    <state width="1237" height="136" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1620924152045" />
     <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
-    <state width="1237" height="172" key="GridCell.Tab.0.center" timestamp="1620843964409">
+    <state width="1237" height="136" key="GridCell.Tab.0.center" timestamp="1620924152045">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="172" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620843964409" />
+    <state width="1237" height="136" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1620924152045" />
     <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
-    <state width="1237" height="172" key="GridCell.Tab.0.left" timestamp="1620843964409">
+    <state width="1237" height="136" key="GridCell.Tab.0.left" timestamp="1620924152044">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="172" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620843964409" />
+    <state width="1237" height="136" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1620924152044" />
     <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620823532189" />
-    <state width="1237" height="172" key="GridCell.Tab.0.right" timestamp="1620843964409">
+    <state width="1237" height="136" key="GridCell.Tab.0.right" timestamp="1620924152045">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="172" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620843964409" />
+    <state width="1237" height="136" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1620924152045" />
     <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1620837472062">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1620837472062" />
     <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1620816599565" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1620897747991">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1620897747991" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -235,5 +257,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChatApplication__java$Server.ic" NAME="Server Coverage Results" MODIFIED="1620890721148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Server.*</FILTER>
+    </SUITE>
   </component>
 </project>

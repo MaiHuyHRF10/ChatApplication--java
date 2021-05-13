@@ -73,31 +73,34 @@
 
 .text-area {
     -fx-font-family: Arial, sans-serif;
-    -fx-highlight-fill: #ffff;
-    -fx-highlight-text-fill: #fff;
-    -fx-text-fill: #ffff;
+    -fx-highlight-fill: #a6f5bb;
+    -fx-highlight-text-fill: #363737;
+    -fx-text-fill: #635c55;
     -fx-border-color: #000;
     -fx-background-insets: 0;
     -fx-background-color: transparent, white, transparent, white;
 }
 
 .text-area .content{
-    -fx-background-color: transparent, #263238;
+    -fx-background-color: transparent,  #a6f5bb;
 }
 
 .textField {
-    -fx-text-fill: #eeeeee;
+    -fx-text-fill: #363737;
     -fx-font-family: Arial !important;
 }
 
 .msgBox {
-    -fx-background-color: #455a64;
+    -fx-background-color: #edc28a;
     -fx-background-radius: 70;
     -fx-font-size: 15px;
-    -fx-text-fill: #eeeeee;
+    -fx-text-fill: #383735;
     -fx-font-family: Arial !important;
 }
 
+.userListView {
+    -fx-cell-size: 36px;
+}
 
 
 /*

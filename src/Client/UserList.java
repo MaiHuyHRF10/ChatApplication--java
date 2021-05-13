@@ -7,7 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.*;
 
 import java.io.IOException;
@@ -75,6 +78,7 @@ public class UserList implements Initializable, UserStatusListener {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("Room chat");
+            stage.setResizable(false);
             stage.show();
 
             status = ConnectDB.getStatus(sendTo);
@@ -86,6 +90,24 @@ public class UserList implements Initializable, UserStatusListener {
     @Override
     public void online(String userName) {
         username.getItems().add(userName);
+
+         //Test them anh vao listview
+        Image testImage = new Image("icons/man1.png");
+        username.setCellFactory(username -> new ListCell<String>() {
+            private ImageView imageView = new ImageView();
+            @Override
+            public void updateItem(String userName, boolean empty) {
+                super.updateItem(userName, empty);
+                if (empty) {
+                    setText(null);
+                    setGraphic(null);
+                } else {
+                    imageView.setImage(testImage);
+                    setText(userName);
+                    setGraphic(imageView);
+                }
+            }
+        });
     }
 
     @Override

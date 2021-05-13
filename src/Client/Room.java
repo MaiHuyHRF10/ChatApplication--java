@@ -165,7 +165,7 @@ public class Room extends Thread implements Initializable, MessageListener {
             proImage.setImage(image);
         }
         showProPic.setFill(new ImagePattern(image));
-        clientName.setText(UserList.sendTo + " " + ConnectDB.getStatus(UserList.sendTo));
+        clientName.setText(UserList.sendTo + " (" + ConnectDB.getStatus(UserList.sendTo) + ")");
         connectSocket();
     }
 
