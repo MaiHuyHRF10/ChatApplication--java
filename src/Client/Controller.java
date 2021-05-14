@@ -1,6 +1,5 @@
 package Client;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,10 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.Socket;
 import java.util.ArrayList;
 
 
@@ -38,8 +34,8 @@ public class Controller {
     public TextField regName;
     @FXML
     public TextField regPass;
-    //    @FXML
-//    public TextField regEmail;
+    @FXML
+    public TextField regEmail;
     @FXML
     public TextField regFulName;
 //    @FXML
@@ -71,12 +67,14 @@ public class Controller {
     public void registration() {
         if (!regName.getText().equalsIgnoreCase("") && !regFulName.getText().equalsIgnoreCase("")
                 && !regPass.getText().equalsIgnoreCase("")
-                && (male.isSelected() || female.isSelected())) {
+                && (male.isSelected() || female.isSelected())
+                && (!regEmail.getText().equalsIgnoreCase(""))) {
             if (checkUser(regName.getText())) {
                 User newUser = new User();
                 newUser.setName(regName.getText());
                 newUser.setPassword(regPass.getText());
                 newUser.setFullName(regFulName.getText());
+                newUser.setEmail(regEmail.getText());
                 if (male.isSelected()) {
                     newUser.setGender("Male");
                 } else {
@@ -128,6 +126,7 @@ public class Controller {
         regName.setText("");
         regPass.setText("");
         regFulName.setText("");
+        regEmail.setText("");
         male.setSelected(true);
         controlRegLabel.setOpacity(0);
         nameExists.setOpacity(0);

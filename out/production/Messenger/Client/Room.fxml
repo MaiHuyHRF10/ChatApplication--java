@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -16,71 +15,6 @@
    <children>
       <StackPane layoutY="67.0" prefHeight="494.0" prefWidth="330.0">
          <children>
-            <Pane fx:id="profile" prefHeight="448.0" prefWidth="335.0" style="-fx-background-color: #a6f5bb;">
-               <children>
-                  <Label layoutX="9.0" layoutY="93.0" text="Full Name: " textFill="#635c55">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="9.0" layoutY="133.0" text="E-mail:" textFill="#635c55">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="8.0" layoutY="173.0" text="Phone No:" textFill="#635c55">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="7.0" layoutY="205.0" prefHeight="34.0" prefWidth="74.0" text="Gender:" textFill="#635c55">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="email" layoutX="129.0" layoutY="133.0" opacity="0.0" textFill="#f2f2f2">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="phoneNo" layoutX="129.0" layoutY="174.0" textFill="#f2f2f2">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="gender" layoutX="129.0" layoutY="212.0" textFill="#f2f2f2">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-                  <ImageView fx:id="proImage" fitHeight="74.0" fitWidth="77.0" layoutX="233.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/user.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="7.0" layoutY="250.0" text="Change Profile Picture:" textFill="#635c55">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="fileChoosePath" editable="false" layoutX="9.0" layoutY="285.0" prefHeight="27.0" prefWidth="210.0" promptText="Choose Image..." style="-fx-background-color: #edc28a;" styleClass="textField" stylesheets="@../Css/style.css">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </TextField>
-                  <Button layoutX="232.0" layoutY="285.0" mnemonicParsing="false" onAction="#chooseImageButton" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #edc28a;" styleClass="allButton" stylesheets="@../Css/style.css" text="Choose" textFill="#7c7a7a">
-                     <font>
-                        <Font name="Arial" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="118.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveImage" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #edc28a;" styleClass="allButton" stylesheets="@../Css/style.css" text="Save" textFill="#7c7a7a">
-                     <font>
-                        <Font name="Arial" size="19.0" />
-                     </font>
-                  </Button>
-                  <TextField layoutX="123.0" layoutY="92.0" style="-fx-background-color: #edc28a;" styleClass="fullNameChange" />
-               </children>
-            </Pane>
             <Pane fx:id="chat" prefHeight="200.0" prefWidth="330.0" style="-fx-background-color: #a6f5bb;">
                <children>
                   <TextArea fx:id="msgRoom" editable="false" layoutX="-7.0" prefHeight="456.0" prefWidth="338.0" style="-fx-background-color: #6cbd81;" styleClass="text-area" stylesheets="@../Css/style.css" wrapText="true">
@@ -113,12 +47,7 @@
                   <Font name="Arial" size="17.0" />
                </font>
             </Label>
-            <Button fx:id="profileBtn" layoutX="257.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleProfileBtn" style="-fx-background-color: #edc28a;" styleClass="allButton" stylesheets="@../Css/style.css" text="Profile" textFill="#7c7a7a">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Button>
-            <Circle fx:id="showProPic" fill="DODGERBLUE" layoutX="35.0" layoutY="34.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="showProPic" fill="DODGERBLUE" layoutX="35.0" layoutY="34.0" radius="30.0" stroke="#6cbd81" strokeType="INSIDE" />
          </children>
       </AnchorPane>
    </children>

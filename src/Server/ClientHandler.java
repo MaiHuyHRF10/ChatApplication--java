@@ -1,5 +1,6 @@
 package Server;
 
+import Client.ConnectDB;
 import Client.Controller;
 import Client.User;
 
@@ -137,6 +138,7 @@ public class ClientHandler extends Thread {
     }
 
     private boolean checkLogin(String username, String password) {
+        ConnectDB.connectDB();
         for (User x : Controller.users) {
             if (x.getName().equalsIgnoreCase(username) && x.getPassword().equalsIgnoreCase(password)) {
                 return true;
@@ -144,6 +146,7 @@ public class ClientHandler extends Thread {
         }
         return false;
     }
+
     private String getUserName() {
         return this.userName;
     }

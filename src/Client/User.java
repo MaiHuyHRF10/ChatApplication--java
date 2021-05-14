@@ -10,6 +10,16 @@ public class User {
     private String gender;
     private String status;
 
+    public String getImgAddress() {
+        return imgAddress;
+    }
+
+    public void setImgAddress(String imgAddress) {
+        this.imgAddress = imgAddress;
+    }
+
+    private String imgAddress;
+
     public void setName(String name) {
         this.name = name;
     }

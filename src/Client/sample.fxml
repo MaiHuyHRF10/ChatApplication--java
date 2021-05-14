@@ -24,12 +24,12 @@
                         <Image url="@../icons/go_back.png" />
                      </image>
                   </ImageView>
-                  <PasswordField fx:id="regPass" layoutX="40.0" layoutY="190.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
+                  <PasswordField fx:id="regPass" layoutX="40.0" layoutY="153.0" prefHeight="40.0" prefWidth="250.0" promptText="Password" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
                   </PasswordField>
-                  <Label layoutX="122.0" layoutY="50.0" text="Sign Up" textFill="#251818">
+                  <Label layoutX="122.0" layoutY="21.0" text="Sign Up" textFill="#251818">
                      <font>
                         <Font size="28.0" />
                      </font>
@@ -54,17 +54,17 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="success" layoutX="80.0" layoutY="343.0" opacity="0.0" text="Registration Successful" textFill="#6abf69">
+                  <Label fx:id="success" layoutX="80.0" layoutY="343.0" opacity="0.0" text="Registration Successful" textFill="#010045">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="goBack" layoutX="75.0" layoutY="450.0" opacity="0.0" text="Please go back and login!" textFill="#6abf69">
+                  <Label fx:id="goBack" layoutX="75.0" layoutY="450.0" opacity="0.0" text="Please go back and login!" textFill="#010045">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="regName" layoutX="40.0" layoutY="129.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
+                  <TextField fx:id="regName" layoutX="40.0" layoutY="95.0" prefHeight="40.0" prefWidth="250.0" promptText="Username" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>
@@ -87,17 +87,22 @@
                         <Font name="Arial" size="16.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="256.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="255.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/user.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="77.0" layoutX="260.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="77.0" layoutX="259.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../icons/secure.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="regFulName" layoutX="40.0" layoutY="246.0" prefHeight="40.0" prefWidth="250.0" promptText="Full Name" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
+                  <TextField fx:id="regFulName" layoutX="40.0" layoutY="207.0" prefHeight="40.0" prefWidth="250.0" promptText="Full Name" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
+                     <font>
+                        <Font name="Arial" size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="regEmail" layoutX="40.0" layoutY="259.0" prefHeight="40.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: #faedde;" styleClass="txtFont" stylesheets="@../Css/style.css">
                      <font>
                         <Font name="Arial" size="17.0" />
                      </font>

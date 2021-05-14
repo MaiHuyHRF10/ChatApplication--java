@@ -23,7 +23,7 @@ public class ConnectDB {
     }
 
     public static void addDatabase(User user) {
-        String sql = "INSERT INTO user(username, password, fullName, gender) VALUES ( ?, ?, ?, ?)";
+        String sql = "INSERT INTO user(username, password, fullName, gender, email) VALUES ( ?, ?, ?, ?, ?)";
 
         try {
             conn.setAutoCommit(false);
@@ -34,6 +34,7 @@ public class ConnectDB {
                 statement.setString(2, user.getPassword());
                 statement.setString(3, user.getFullName());
                 statement.setString(4, user.getGender());
+                statement.setString(5, user.getEmail());
                 int rowindex = statement.executeUpdate();
                 conn.commit();
             }
@@ -58,6 +59,40 @@ public class ConnectDB {
         return null;
     }
 
+    public static void setImgAddress(String temp, String user) {
+        String sql = "UPDATE user SET imgAddress = ? WHERE username = ?";
+
+        try {
+            conn.setAutoCommit(false);
+            PreparedStatement statement = conn.prepareStatement(sql);
+            if (conn != null) {
+                //statement.setInt(1, 20000);
+                statement.setString(1, temp);
+                statement.setString(2, user);
+                int rowindex = statement.executeUpdate();
+                conn.commit();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getImgAddress(String user) {
+        var sql = "select * from user where username = ?";
+        PreparedStatement statement = null;
+        try {
+            statement = conn.prepareStatement(sql);
+            statement.setString(1, user);
+            var resultSet = statement.executeQuery();
+            if (!resultSet.next()) return null;
+            String status = resultSet.getString("imgAddress");
+            return status;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
     public static void setStatus(String temp, String user) {
         String sql = "UPDATE user SET status = ? WHERE username = ?";
 
@@ -75,6 +110,7 @@ public class ConnectDB {
             e.printStackTrace();
         }
     }
+
     private static void showResult(ResultSet resultSet) {
         while (true) {
             try {
@@ -84,12 +120,14 @@ public class ConnectDB {
                 String gender = resultSet.getString("gender");
                 String fullname = resultSet.getString("fullName");
                 String status = resultSet.getString("status");
+                String email = resultSet.getString("email");
                 User newUser = new User();
                 newUser.setName(username);
                 newUser.setPassword(password);
                 newUser.setGender(gender);
                 newUser.setFullName(fullname);
                 newUser.setStatus(status);
+                newUser.setEmail(email);
                 Controller.users.add(newUser);
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
