@@ -59,6 +59,22 @@ public class ConnectDB {
         return null;
     }
 
+    public static String getGender(String user) {
+        var sql = "select * from user where username = ?";
+        PreparedStatement statement = null;
+        try {
+            statement = conn.prepareStatement(sql);
+            statement.setString(1, user);
+            var resultSet = statement.executeQuery();
+            if (!resultSet.next()) return null;
+            String status = resultSet.getString("gender");
+            return status;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
     public static void setImgAddress(String temp, String user) {
         String sql = "UPDATE user SET imgAddress = ? WHERE username = ?";
 

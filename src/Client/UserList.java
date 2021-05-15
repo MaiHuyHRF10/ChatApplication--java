@@ -1,6 +1,8 @@
 package Client;
 
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -66,6 +68,8 @@ public class UserList implements Initializable, UserStatusListener {
 
     public static ChatClient client;
 
+    public static ObservableList<String> items = FXCollections.observableArrayList ();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         client = new ChatClient(8888, "localhost");
@@ -83,7 +87,7 @@ public class UserList implements Initializable, UserStatusListener {
             }
         } else {
             if (Controller.gender.equalsIgnoreCase("Male")) {
-                image = new Image("icons/user.png", false);
+                image = new Image("icons/man1.png", false);
             } else {
                 image = new Image("icons/female.png", false);
                 proImage.setImage(image);
@@ -116,14 +120,6 @@ public class UserList implements Initializable, UserStatusListener {
 
     private void changeWindow() {
         try {
-
-//            Stage stage = (Stage) user.getScene().getWindow();
-//            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
-//            stage.setScene(new Scene(root, 330, 560));
-//            stage.setTitle("Chat Application");
-//            stage.setResizable(false);
-//            stage.show();
-
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Room.fxml"));
             Parent root = (Parent) loader.load();
             Scene scene = new Scene(root);
@@ -142,28 +138,54 @@ public class UserList implements Initializable, UserStatusListener {
     @Override
     public void online(String userName) {
         Platform.runLater(() -> {
-            username.getItems().add(userName);
+            items.add(userName);
+            username.setItems(items);
+            //username.getItems().add(userName);
         });
 
          //Test them anh vao listview
-        Image testImage = new Image("icons/man1.png");
-
-
+        //Image testImage = new Image("icons/man1.png");
         username.setCellFactory(username -> new ListCell<String>() {
             private ImageView imageView = new ImageView();
             @Override
-            public void updateItem(String userName, boolean empty) {
-                super.updateItem(userName, empty);
+            public void updateItem(String name, boolean empty) {
+                super.updateItem(name, empty);
                 if (empty) {
                     setText(null);
                     setGraphic(null);
                 } else {
-                    imageView.setImage(testImage);
-                    setText(userName);
-                    setGraphic(imageView);
+                    if (name != null) {
+                        System.out.println("empty: " + empty + ", name: " + name);
+                        Image testImage = getProfileImageFromDatabase(name);
+                        imageView.setImage(testImage);
+                        setText(name);
+                        setGraphic(imageView);
+                    }
                 }
             }
         });
+
+    }
+
+    public Image getProfileImageFromDatabase(String username) {
+        String path = ConnectDB.getImgAddress(username);
+        Image image = new Image("icons/man1.png");
+        if (path != null) {
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(path));
+                image = SwingFXUtils.toFXImage(bufferedImage, null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            if (ConnectDB.getGender(username).equalsIgnoreCase("Male")) {
+                image = new Image("icons/man1.png", false);
+            } else {
+                image = new Image("icons/female.png", false);
+            }
+        }
+        return image;
     }
 
     @Override

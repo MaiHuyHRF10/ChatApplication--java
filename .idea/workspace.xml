@@ -21,21 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a9eee90a-4fa5-4c32-962f-6cefbf72bf4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/Room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/Room.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Messenger/Client/UserList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/ConnectDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/ConnectDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Room.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/UserList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/UserList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/ClientHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Chat - LMH/Chatting-Application-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -187,36 +176,40 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="261" y="0" width="547" height="720" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.720@0.0.1280.720" timestamp="1620837470991" />
-    <state x="371" y="103" key="FileChooserDialogImpl" timestamp="1620732673049">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="348" y="102" key="FileChooserDialogImpl" timestamp="1621054715487">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1620728355650" />
+    <state x="348" y="102" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1621054715487" />
     <state x="371" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620732673049" />
-    <state width="1237" height="221" key="GridCell.Tab.0.bottom" timestamp="1621013986196">
+    <state width="1237" height="310" key="GridCell.Tab.0.bottom" timestamp="1621059711349">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="221" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621013986196" />
+    <state width="1237" height="310" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1621059711349" />
     <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
-    <state width="1237" height="221" key="GridCell.Tab.0.center" timestamp="1621013986196">
+    <state width="1237" height="310" key="GridCell.Tab.0.center" timestamp="1621059711349">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="221" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1621013986196" />
+    <state width="1237" height="310" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1621059711349" />
     <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
-    <state width="1237" height="221" key="GridCell.Tab.0.left" timestamp="1621013986196">
+    <state width="1237" height="310" key="GridCell.Tab.0.left" timestamp="1621059711349">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="221" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1621013986196" />
+    <state width="1237" height="310" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1621059711349" />
     <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1620823532189" />
-    <state width="1237" height="221" key="GridCell.Tab.0.right" timestamp="1621013986196">
+    <state width="1237" height="310" key="GridCell.Tab.0.right" timestamp="1621059711349">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="221" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1621013986196" />
+    <state width="1237" height="310" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1621059711349" />
     <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1620823532190" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1620837472062">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="121" y="0" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1620837472062" />
     <state x="129" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1620816599565" />
+    <state x="233" y="90" key="Vcs.Push.Dialog.v2" timestamp="1621059180528">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="90" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1621059180528" />
     <state x="297" y="161" key="run.anything.popup" timestamp="1621012602231">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -265,6 +258,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Client/UserList.java</url>
+          <line>138</line>
+          <properties class="Client.UserList" method="online">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
